@@ -15,10 +15,10 @@ function createSnowflake() {
   snowflake.classList.add('snowflake');
 
   // Randomize starting position and size
-  const size = Math.random() * 10 + 5 + 'px'; // Size between 5px and 15px
-  const left = Math.random() * 100 + '%'; // Random horizontal position
-  const duration = Math.random() * 3 + 2 + 's'; // Duration between 2s and 5s
-  const delay = Math.random() * 2 + 's'; // Random delay
+  const size = Math.random() * 10 + 5 + 'px';
+  const left = Math.random() * 100 + '%'; 
+  const duration = Math.random() * 3 + 2 + 's'; 
+  const delay = Math.random() * 1 + 's'; 
 
   snowflake.style.width = size;
   snowflake.style.height = size;
@@ -32,7 +32,7 @@ function createSnowflake() {
   // Remove the snowflake after it falls out of view
   setTimeout(() => {
     snowflake.remove();
-  }, parseFloat(duration) * 500); 
+  }, parseFloat(duration) * 1000); 
 }
 
 setInterval(createSnowflake, 100);
@@ -105,3 +105,26 @@ targetDiv.parentNode.insertBefore(conclusionDiv, targetDiv);
 
 // Move the target div inside the wrapper
 conclusionDiv.appendChild(targetDiv);
+
+
+//Scroll Effect
+document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll('section');
+
+  const revealOnScroll = () => {
+    revealElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top;
+      console.log(elementTop)
+      const windowHeight = window.innerHeight;
+
+      if (elementTop < windowHeight - 200) { // Adjust offset for earlier reveal
+        element.classList.add("visible");
+        element.classList.remove("hidden");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Run once on page load
+});
