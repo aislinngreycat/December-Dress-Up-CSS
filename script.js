@@ -50,19 +50,19 @@ cloudsLayer.appendChild(cloudsEffect);
 const CelebrationSection = document.getElementById('celebrations');
 const CelebrationCardDiv = document.createElement('div');
 CelebrationCardDiv.className = 'celebration-card';
-
-
-
 const children = Array.from(CelebrationSection.children);
-
 children.forEach((child) => {
     if (child.classList.contains('celebration')) {
         CelebrationCardDiv.appendChild(child);
     }
   });
-
-
 CelebrationSection.appendChild(CelebrationCardDiv)
+
+
+/** Add Additional Images to div Celebrations */
+const NGimageDiv = document.createElement('div')
+const newgrange = document.getElementById('newgrange');
+newgrange.style.backgroundImage='url(bonfire.jpg)';
 
 /**Add additional styles for div traditions */
 const traditionalSection = document.getElementById('traditions');
