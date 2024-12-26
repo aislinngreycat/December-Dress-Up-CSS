@@ -95,8 +95,9 @@ conclusionDiv.appendChild(imageDiv)
 
 // Add Style to Conclusion Wrapper
 conclusionDiv.className = 'conclusion_wrapper';
-conclusionDiv.style.display = "flex"
+conclusionDiv.style.display = "flex";
 conclusionDiv.style.alignItems = "flex-start"
+conclusionDiv.style.marginTop= "20px";
 
 
 // Insert the wrapper div into the DOM before the target div
