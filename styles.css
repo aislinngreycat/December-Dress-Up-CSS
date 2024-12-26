@@ -44,15 +44,14 @@ p{
 @media (max-width: 600px) {
 
   #main-header{
-    height: 50dvh !important;
-    margin: 0px;
+    height: 60dvh !important;
+    margin-bottom: 5px!important;
     padding: 0px;
   }
 
   #main-nav{
-    position: fixed !important;
-    top:0px;
-    left:0px;
+    margin-top:10%;
+    position:static !important;
   }
 
   #main-nav>ul {
@@ -64,20 +63,29 @@ p{
     font-size: 12px
     }
   section {
-    height: 100dvh !important;
-        font-size: 12px !important;
-        padding: 1px;
+    height: 60dvh !important;
+    font-size: 12px !important;
+    padding: 1px;
+    margin-bottom: 10%!important;
     }
 
     section > h2 {
         position: absolute;
         padding-left: 5%;
-        padding-top: 100px
+        padding-top: 100px;
+        font-size:x-large!important;
+    }
+
+    .celebration{
+      
+      width: 100% !important;
+     
     }
 
 
     #celebrations >h2{
-      padding-top: 100px
+      margin-top:1px;
+      padding-top: 0px
     }
 
     #conclusion {
@@ -199,10 +207,11 @@ p{
 
 
 section {
-    height: 100vh !important; 
+    height: 100vh ; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
     text-align: left;
     position: relative;
     font-size: 1rem;
@@ -213,15 +222,7 @@ section {
     transition: opacity 12s ease, transform 12s ease;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateY(50px); 
-}
 
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 section > h2 {
     font-family: 'Courier New', Courier, monospace;
@@ -265,17 +266,34 @@ section > h2 {
 
   }
 
-#celebrations {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%; 
-    overflow: hidden;
+
+
+.celebration-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  margin-bottom: 20px;
   }
 
-  #celebrations >h2 {
+
+ 
+
+  .celebration{
+    padding: 10px;
+    margin: 10px;
+    height: auto;
+    width: 20%;
+    background: white;
+    border-radius:10px;
+    border: 1px solid transparent;
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease-in-out; 
+  }
+
+#celebrations >h2 {
     text-shadow: 2px 2px rgba(255, 255, 255, 0.37);
   }
-
 
 
 #hemispheres > p {

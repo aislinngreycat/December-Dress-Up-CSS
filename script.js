@@ -50,11 +50,7 @@ cloudsLayer.appendChild(cloudsEffect);
 const CelebrationSection = document.getElementById('celebrations');
 const CelebrationCardDiv = document.createElement('div');
 CelebrationCardDiv.className = 'celebration-card';
-CelebrationCardDiv.style.backgroundColor ='rgba(255,255,255, 0.5)';
-CelebrationCardDiv.style.borderRadius = '15px';
-CelebrationCardDiv.style.color = 'black';
-CelebrationCardDiv.style.margin = '20px';
-CelebrationCardDiv.style.padding = '20px';
+
 
 
 const children = Array.from(CelebrationSection.children);
@@ -107,24 +103,3 @@ targetDiv.parentNode.insertBefore(conclusionDiv, targetDiv);
 conclusionDiv.appendChild(targetDiv);
 
 
-//Scroll Effect
-document.addEventListener("DOMContentLoaded", () => {
-  const revealElements = document.querySelectorAll('section');
-
-  const revealOnScroll = () => {
-    revealElements.forEach((element) => {
-      const rect = element.getBoundingClientRect();
-      const elementTop = rect.top;
-      console.log(elementTop)
-      const windowHeight = window.innerHeight;
-
-      if (elementTop < windowHeight - 200) { // Adjust offset for earlier reveal
-        element.classList.add("visible");
-        element.classList.remove("hidden");
-      }
-    });
-  };
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Run once on page load
-});
